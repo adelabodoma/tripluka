@@ -1,3 +1,38 @@
-<p>
-  login works!
-</p>
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="/"></ion-back-button>
+  </ion-buttons>
+</ion-toolbar>
+<ion-content>
+  <form #loginForm="ngForm" (ngSubmit)="login(loginForm)" novalidate>
+    <ion-row>
+      <ion-col size='12' class="ion-padding-vertical">
+        <ion-title class="main-heading">Sign In</ion-title>
+      </ion-col>
+      <ion-col size="12" class="ion-margin-vertical">
+        <ion-item>
+          <ion-label position="stacked">Email Address</ion-label>
+          <ion-input name='email' ngModel></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" class="ion-margin-vertical">
+        <ion-item>
+          <ion-label position="stacked">Password</ion-label>
+          <ion-input name='password' ngModel></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" class="ion-margin-vertical">
+        <a href="" [routerLink]="['/forgetPassword']">Forget Password?</a>
+      </ion-col>
+      <ion-col size="12" class="ion-margin-vertical">
+        <ion-button type='submit' expand="block">Sign In</ion-button>
+      </ion-col>
+      <ion-col size="6" class="ion-margin-vertical">
+        <ion-button type='submit' expand="block">Google</ion-button>
+      </ion-col>
+      <ion-col size="6" class="ion-margin-vertical">
+        <ion-button type='submit' expand="block">Facebook</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>
