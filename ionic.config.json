@@ -1,5 +1,7 @@
 {
   "name": "tripluka",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

@@ -17,7 +17,7 @@
       </ion-col>
       <ion-col size="12" class="ion-margin-vertical">
         <ion-item>
-          <ion-label position="stacked">Password</ion-label>
+          <ion-label position="stacked">Password</ion-label> 
           <ion-input name='password' ngModel></ion-input>
         </ion-item>
       </ion-col>
@@ -27,12 +27,14 @@
       <ion-col size="12" class="ion-margin-vertical">
         <ion-button (click)="login()" type='submit' expand="block">Sign In</ion-button>
       </ion-col>
-      <ion-col size="6" class="ion-margin-vertical">
-        <ion-button type='submit' expand="block">Google</ion-button>
-      </ion-col>
-      <ion-col size="6" class="ion-margin-vertical">
-        <ion-button type='submit' expand="block">Facebook</ion-button>
-      </ion-col>
     </ion-row>
   </form>
+  <ion-row>
+    <ion-col size="6" class="ion-margin-vertical">
+      <ion-button type='submit' expand="block">Google</ion-button>
+    </ion-col>
+    <ion-col size="6" class="ion-margin-vertical">
+      <ion-button type='submit' expand="block" (click)="loginFB()">Facebook</ion-button>
+    </ion-col>
+  </ion-row>
 </ion-content>
