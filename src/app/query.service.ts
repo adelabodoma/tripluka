@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+import { environment } from '../environments/environment';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -15,6 +17,16 @@ export class QueryService {
   }
 
   post(url: string, body) {
-    return this.http.post(url, body);
+    const URL = environment.baseURL + url;
+    const Data = new FormData();
+    
+    // Append the Data
+    for (const key in body) {
+      if (body.hasOwnProperty(key)) {
+        Data.append(key, body[key])
+      }
+    }
+
+    return this.http.post(URL, Data);
   }
 }
